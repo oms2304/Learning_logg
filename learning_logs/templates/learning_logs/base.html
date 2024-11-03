@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Log</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        header a:hover {
+            color: #ccc;
+        }
+        main {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p>
+                <a href="{% url 'learning_logs:index' %}">Learning Log</a>
+                <a href="{% url 'learning_logs:topics' %}">Topics</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            {% block content %}{% endblock content %}
+        </main>
+    </div>
+</body>
+</html>
